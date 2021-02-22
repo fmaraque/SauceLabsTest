@@ -44,5 +44,6 @@ public class SauceLabsTest {
         if (driver != null) {
             driver.quit();
         }
+
     }
 }
