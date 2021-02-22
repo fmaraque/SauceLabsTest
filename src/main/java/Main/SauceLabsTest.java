@@ -14,6 +14,9 @@ public class SauceLabsTest {
 
     public static void main(String[] args) {
 
+        String SAUCE_USERNAME = args[0];
+        String SAUCE_USER_KEY = args[1];
+
         // SETUP
         MutableCapabilities capabilities = new MutableCapabilities();
         capabilities.setCapability("appiumVersion", "1.17.1");
@@ -24,7 +27,7 @@ public class SauceLabsTest {
         capabilities.setCapability("name", "SauceLabs Tunnel Test");
         capabilities.setCapability("idleTimeout", "90");
         capabilities.setCapability("newCommandTimeout", "90");
-        String url = "https://" + System.getenv("SAUCE_USERNAME") + ":" + System.getenv("SAUCE_ACCESS_KEY") + "@ondemand.eu-central-1.saucelabs.com:443" + "/wd/hub";
+        String url = "https://" + SAUCE_USERNAME + ":" + SAUCE_USER_KEY + "@ondemand.eu-central-1.saucelabs.com:443" + "/wd/hub";
         System.out.println("[DEBUG][URL]: " + url);
 
         try {
