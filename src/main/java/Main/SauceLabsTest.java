@@ -24,13 +24,11 @@ public class SauceLabsTest {
         capabilities.setCapability("name", "SauceLabs Tunnel Test");
         capabilities.setCapability("idleTimeout", "90");
         capabilities.setCapability("newCommandTimeout", "90");
+        String url = "https://" + System.getenv("SAUCE_USERNAME") + ":" + System.getenv("SAUCE_ACCESS_KEY") + "@ondemand.eu-central-1.saucelabs.com:443" + "/wd/hub";
+        System.out.println("[DEBUG][URL]: " + url);
 
         try {
-            driver = new RemoteWebDriver(
-                    new URL("https://" + System.getenv("SAUCE_USERNAME") + ":" +
-                            System.getenv("SAUCE_ACCESS_KEY") +
-                            "@ondemand.eu-central-1.saucelabs.com:443" + "/wd/hub"),
-                    capabilities);
+            driver = new RemoteWebDriver(new URL(url), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
