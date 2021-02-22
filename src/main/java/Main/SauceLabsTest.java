@@ -14,8 +14,8 @@ public class SauceLabsTest {
 
     public static void main(String[] args) {
 
-        String SAUCE_USERNAME = "carlosnavarro";
-        String SAUCE_USER_KEY = "33029b25-3230-497f-8d37-38df15b96d1f";
+        String SAUCE_USERNAME = args[0];
+        String SAUCE_USER_KEY = args[1];
 
         // SETUP
         MutableCapabilities capabilities = new MutableCapabilities();
