@@ -27,7 +27,7 @@ public class SauceLabsTest {
         capabilities.setCapability("name", "SauceLabs Tunnel Test");
         capabilities.setCapability("idleTimeout", "90");
         capabilities.setCapability("newCommandTimeout", "90");
-        capabilities.setCapability("tunnelIdentifier", "carlosnavarro_tunnel_id");
+        capabilities.setCapability("tunnelIdentifier", "automated_tunnel");
         String url = "https://" + SAUCE_USERNAME + ":" + SAUCE_USER_KEY + "@ondemand.eu-central-1.saucelabs.com:443" + "/wd/hub";
         System.out.println("[DEBUG][URL]: " + url);
 
