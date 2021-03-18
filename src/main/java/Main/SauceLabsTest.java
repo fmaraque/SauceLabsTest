@@ -32,6 +32,7 @@ public class SauceLabsTest {
         System.out.println("[DEBUG][URL]: " + url);
 
         try {
+             System.out.println("Test");
             driver = new RemoteWebDriver(new URL(url), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
